@@ -8,7 +8,8 @@ import {WelcomePage} from '../welcome/welcome';
   templateUrl: 'home.html'
 })
 export class HomePage {
- public email:string;
+ public user:string;
+ public contra:string;
  public error:boolean=false;
 
   constructor(public navCtrl: NavController, public quotes:QuoteService) {
@@ -16,7 +17,7 @@ this.quotes.getFavoriteSports();
   }
 
   login():void{
-if(this.email==this.quotes.data.email){
+if(this.user==this.quotes.data.user && this.contra==this.quotes.data.contra){
 console.log("Todo Bien");
 this.error=false;
 this.navCtrl.push(WelcomePage);
