@@ -1,14 +1,34 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Login
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    
+<ion-list>
+    <ion-item>
+        <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX28408818.jpg"  alt="">
+      </ion-item>
+  <ion-item>
+    <ion-label floating>Usuario</ion-label>
+    <ion-input type="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Contraseña</ion-label>
+    <ion-input type="contraseña"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div padding>
+  <button ion-button block color="dark" (click)="ingresar()">Ingresar</button>
+</div>
+<div>
+  <p *ngIf="error">Error, Email Incorrecto</p>
+</div>
 </ion-content>
+
