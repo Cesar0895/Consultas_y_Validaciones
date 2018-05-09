@@ -17,9 +17,10 @@
     <ion-input type="text" [(ngModel)]="user"></ion-input>
   </ion-item>
 
+<!-- [(ngModel)]="contra" -->
   <ion-item>
     <ion-label floating>Contraseña</ion-label>
-    <ion-input type="text" [(ngModel)]="contra"></ion-input>
+    <ion-input type="text"></ion-input>
   </ion-item>
 
 </ion-list>
@@ -28,7 +29,7 @@
   <button ion-button block color="dark" (click)="login()">Ingresar</button>
 </div>
 <div>
-  <p *ngIf="error">Error, Email Incorrecto</p>
+  <p *ngIf="error">Usuario y/o contraseña incorrectos</p>
 </div>
 </ion-content>
 
