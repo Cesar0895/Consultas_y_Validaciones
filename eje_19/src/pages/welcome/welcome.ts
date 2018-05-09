@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {QuoteService} from "../../services/quotes";
+import { AlumnosPage } from '../alumnos/alumnos';
+import { CalificacionesPage } from '../calificaciones/calificaciones';
 /**
  * Generated class for the WelcomePage page.
  *
@@ -19,8 +21,12 @@ export class WelcomePage {
     console.log("Informacion"+this.quote.data);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad WelcomePage');
-  }
+  alumnos():void{ 
+    this.navCtrl.push(AlumnosPage);
+      }
+
+      calificaciones():void{ 
+        this.navCtrl.push(CalificacionesPage);
+          }
 
 }

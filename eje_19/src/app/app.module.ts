@@ -7,6 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { AlumnosPage } from '../pages/alumnos/alumnos';
+import { CalificacionesPage } from '../pages/calificaciones/calificaciones';
 
 import {HttpModule} from '@angular/http';
 import {QuoteService} from '../services/quotes';
@@ -15,7 +17,9 @@ import {QuoteService} from '../services/quotes';
   declarations: [
     MyApp,
     HomePage,
-    WelcomePage
+    WelcomePage,
+    AlumnosPage,
+    CalificacionesPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,9 @@ import {QuoteService} from '../services/quotes';
   entryComponents: [
     MyApp,
     HomePage,
-    WelcomePage
+    WelcomePage,
+    AlumnosPage,
+    CalificacionesPage
   ],
   providers: [
     StatusBar,

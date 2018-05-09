@@ -6,3 +6,24 @@
   </ion-navbar>
 
 </ion-header>
+
+<ion-content padding>
+    
+  <ion-list>
+     
+    <ion-item>
+      <ion-label >{{this.quote.data.name}}</ion-label>
+    </ion-item>
+
+  
+  </ion-list>
+  
+  <div padding>
+      <button ion-button block color="dark" (click)="alumnos()" >Capturar Alumno</button>
+
+  </div>
+  <div>
+      <button ion-button block color="dark" (click)="calificaciones()">Capturar Calificacion</button>
+  </div>
+  </ion-content>
+  
