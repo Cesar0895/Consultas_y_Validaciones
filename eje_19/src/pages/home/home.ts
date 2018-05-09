@@ -9,7 +9,7 @@ import {WelcomePage} from '../welcome/welcome';
 })
 export class HomePage {
  public user:string;
- //public contra:string;
+ public contra:string;
  public error:boolean=false;
 
   constructor(public navCtrl: NavController, public quotes:QuoteService) {
@@ -17,13 +17,15 @@ this.quotes.getFavoriteSports();
   }
 
   login():void{
-if(this.user==this.quotes.data.user /*&& this.contra==this.quotes.data.contra*/){
+if(this.user==this.quotes.data.user && this.contra==this.quotes.data.contra){
 console.log("Todo Bien");
 this.error=false;
 this.navCtrl.push(WelcomePage);
 }
 else{console.log(this.quotes.data.user);
   console.log(this.user);
+  console.log(this.quotes.data.contra);
+  console.log(this.contra);
 this.error=true;
 }
   }
