@@ -22,4 +22,8 @@ export class AlumnosPage {
     console.log('ionViewDidLoad AlumnosPage');
   }
 
+  save():void{ 
+   
+    
+      }
 }
