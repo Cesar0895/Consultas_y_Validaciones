@@ -2,31 +2,15 @@ import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
 
 @Injectable()
-export class QuoteService{
+export class QuoteServices{
     //private http:any;
-    public data:any;
-    
+    public dataa:any;
     //private _email:string;
 
 
     constructor(private http:Http){
         //this.http=http
     }
-
-    getFavoriteSports(){
-        this.http.get("http://localhost:8080/user.json")
-        .subscribe(
-            res=>{
-                console.log("Quote Service");
-                this.data=res.json();
-                console.log(this.data);
-            },
-            error=>{
-                console.log(error);
-            }
-        );
-    }
-
 
     getAlumnos(){
         this.http.get("http://localhost:8080/alumnos.json")

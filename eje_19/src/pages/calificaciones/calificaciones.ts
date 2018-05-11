@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { QuoteServices } from '../../services/quotesa';
 
 /**
  * Generated class for the CalificacionesPage page.
@@ -15,11 +16,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CalificacionesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public quotes:QuoteServices) {
+    this.quotes.getAlumnos();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalificacionesPage');
   }
 
+  save():void{ 
+   
+    
+  }
 }

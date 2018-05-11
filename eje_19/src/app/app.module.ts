@@ -12,6 +12,7 @@ import { CalificacionesPage } from '../pages/calificaciones/calificaciones';
 
 import {HttpModule} from '@angular/http';
 import {QuoteService} from '../services/quotes';
+import {QuoteServices} from '../services/quotesa';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {QuoteService} from '../services/quotes';
     StatusBar,
     SplashScreen,
     QuoteService,
+    QuoteServices,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
