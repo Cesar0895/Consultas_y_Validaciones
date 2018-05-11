@@ -1,14 +1,19 @@
-
-    {
-        "Alumnos":[
+{"alumnos":[
             {
         "name":"Pepito",
         "apellidop":"Perez",
         "apellidom":"Lopez",
-        "email":"pepito@hotmail.com",
-        "fechanac":"12-12-1994"
+        "email":"pepito@hotmail.com"
+        
+         },
+
+        {
+        "name":"Cesar",
+        "apellidop":"Ramses",
+        "apellidom":"Lopez",
+        "email":"pepito@hotmail.com"
+        
          }
         
         ]
-    }
-
+}
