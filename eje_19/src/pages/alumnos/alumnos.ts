@@ -30,7 +30,9 @@ export class AlumnosPage {
       nombre:['',Validators.required],
       apellidop:['',Validators.required],
       apellidom:['',Validators.required],
-      email:['',Validators.required]
+      email:['',Validators.compose([Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]
+    )]
+    
     });
   
     this.nombre = this.formgroup.controls['nombre'];

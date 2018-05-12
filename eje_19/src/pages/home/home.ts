@@ -17,7 +17,7 @@ export class HomePage {
  formgroup:FormGroup;
 
   usuario:AbstractControl;
-  contraseña:AbstractControl;
+  con:AbstractControl;
 
   constructor(public navCtrl: NavController, public quotes:QuoteService,public formbuilder:FormBuilder) {
 this.quotes.getFavoriteSports();
@@ -25,11 +25,11 @@ this.quotes.getFavoriteSports();
 
 this.formgroup = this.formbuilder.group({
   usuario:['',Validators.required],
-  contraseña:['',Validators.required]
+  con:['',Validators.required]
 });
 
 this.usuario = this.formgroup.controls['usuario'];
-this.contraseña = this.formgroup.controls['contraseña'];
+this.con = this.formgroup.controls['con'];
 
 
   }

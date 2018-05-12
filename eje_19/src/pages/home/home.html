@@ -23,9 +23,11 @@
 <!-- [(ngModel)]="contra" --> <!-- formGroup="username" formControlName="pass" -->
   <ion-item>
     <ion-label floating>Contraseña</ion-label>
-    <ion-input type="password" formControlName="contraseña" maxLength="8" [(ngModel)]="contra"></ion-input>
+    <ion-input type="password" formControlName="con" maxLength="8" [(ngModel)]="contra"></ion-input>
   </ion-item>
-  
+  <ion-item *ngIf="con.hasError('required') && con.touched">
+    <p>Contraseña Requerida</p>
+  </ion-item>
 
 </ion-list>
 </form>
@@ -34,7 +36,7 @@
   <button ion-button block color="dark" (click)="login()">Ingresar</button>
 </div>
 <div>
-  <p *ngIf="error">Usuario y/o contraseña incorrectos</p>
+  <p *ngIf="error">Usuario y/o Contraseña incorrectos</p>
 </div>
 </ion-content>
 
