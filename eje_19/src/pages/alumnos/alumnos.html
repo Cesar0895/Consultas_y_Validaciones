@@ -7,26 +7,35 @@
   </ion-header>
   
   <ion-content padding>
-      
+      <form [formGroup]="formgroup">
   <ion-list>
     <ion-item>
       <ion-label floating>Nombre</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="nombre.hasError('required') && nombre.touched">
+      <p>Nombre Requerido</p>
     </ion-item>
   
     <ion-item>
       <ion-label floating>Apellido Paterno</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" formControlName="apellidop"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="apellidop.hasError('required') && apellidop.touched">
+      <p>Apellido Paterno Requerido</p>
     </ion-item>
   
     <ion-item>
       <ion-label floating>Apellido Materno</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" formControlName="apellidom"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="apellidom.hasError('required') && apellidom.touched">
+      <p>Apellido Materno Requerido</p>
     </ion-item>
   
     <ion-item>
       <ion-label floating>Email</ion-label>
-      <ion-input type="email"></ion-input>
+      <ion-input type="email" ></ion-input>
     </ion-item>
 
     <ion-item>  
@@ -36,9 +45,10 @@
   
   </ion-list>
   
-  
+</form>
   <div padding>
     <button ion-button block color="dark" (click)="save()">Guardar</button>
   </div>
+ 
   </ion-content>
   

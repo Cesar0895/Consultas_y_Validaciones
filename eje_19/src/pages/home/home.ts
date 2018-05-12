@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {QuoteService} from '../../services/quotes';
 import {WelcomePage} from '../welcome/welcome';
+import {FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import {ActionSheetController} from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -12,11 +14,28 @@ export class HomePage {
  public contra:string;
  public error:boolean=false;
 
-  constructor(public navCtrl: NavController, public quotes:QuoteService) {
+ formgroup:FormGroup;
+
+  usuario:AbstractControl;
+  contraseña:AbstractControl;
+
+  constructor(public navCtrl: NavController, public quotes:QuoteService,public formbuilder:FormBuilder) {
 this.quotes.getFavoriteSports();
+
+
+this.formgroup = this.formbuilder.group({
+  usuario:['',Validators.required],
+  contraseña:['',Validators.required]
+});
+
+this.usuario = this.formgroup.controls['usuario'];
+this.contraseña = this.formgroup.controls['contraseña'];
+
+
   }
 
   login():void{
+    
 if(this.user==this.quotes.data.user && this.contra==this.quotes.data.contra){
 console.log("Todo Bien");
 this.error=false;
@@ -29,6 +48,8 @@ else{console.log(this.quotes.data.user);
 this.error=true;
 }
   }
+
+
 
 }
 

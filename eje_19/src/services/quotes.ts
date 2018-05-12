@@ -28,7 +28,7 @@ export class QuoteService{
     }
 
 
-    getAlumnos(){
+   /* getAlumnos(){
         this.http.get("http://localhost:8080/alumnos.json")
         .subscribe(
             res=>{
@@ -40,5 +40,5 @@ export class QuoteService{
                 console.log(error);
             }
         );
-    }
+    }*/
 }

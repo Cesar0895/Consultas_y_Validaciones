@@ -7,23 +7,28 @@
 </ion-header>
 
 <ion-content padding>
-    
+  <form [formGroup]="formgroup">
 <ion-list>
     <ion-item>
         <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX28408818.jpg"  alt="">
       </ion-item>
   <ion-item>
     <ion-label floating>Usuario</ion-label>
-    <ion-input type="text" [(ngModel)]="user"></ion-input>
+    <ion-input type="text" formControlName="usuario" maxLength="6" [(ngModel)]="user"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="usuario.hasError('required') && usuario.touched">
+    <p>Usuario Requerido</p>
   </ion-item>
 
-<!-- [(ngModel)]="contra" -->
+<!-- [(ngModel)]="contra" --> <!-- formGroup="username" formControlName="pass" -->
   <ion-item>
     <ion-label floating>Contraseña</ion-label>
-    <ion-input type="password" [(ngModel)]="contra"></ion-input>
+    <ion-input type="password" formControlName="contraseña" maxLength="8" [(ngModel)]="contra"></ion-input>
   </ion-item>
+  
 
 </ion-list>
+</form>
 
 <div padding>
   <button ion-button block color="dark" (click)="login()">Ingresar</button>
